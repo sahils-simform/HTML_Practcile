@@ -169,21 +169,3 @@ body {
     padding: 5px 40px;
     border: 1px solid #dbdbdb;
 }
-/*.search_bar{
-    display: block;
-    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
-    height: 35px;
-    weight:100%;
-    max-width: 564px;
-    position: relative;
-}
-
-.search_box{
-    display: flex;
-    justify-content:space-between;
-    border-radius: 2px;
-    background-color: #fff;
-    position: relative;
-    display: inline-block;
-    width: 100% ;
-}
