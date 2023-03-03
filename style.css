@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -42,6 +42,10 @@ header {
     margin-top: 4px;
     display: block;
     cursor: pointer;
+}
+
+.plus_link :hover{
+    text-decoration: underline;
 }
 
 .plus_link{
@@ -135,12 +139,14 @@ header .become-seller {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     min-width: 240px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1; 
     top: 56px;
     right: 390px;
+    border-radius: 2px;
+    align-items: center;
 }
   
 .dropdown-content a {
@@ -148,14 +154,25 @@ header .become-seller {
     padding: 14px 16px;
     text-decoration: none;
     display: block;
-  }
+    justify-content: center;
+    font-weight: 400;
+    font-size: 0.8vw;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: center;
+}
+
+.notification{
+    background-color: white;
+    gap: 1px;
+}
 
 .more:hover .dropdown-content {
     display: block;
   }
   
 .more:hover .svg_more{
-    transform: rotate(270deg);
+    transform: rotate(90deg);
+    transition: 0.3s;
 }
 
 .container-header_items{
@@ -165,7 +182,7 @@ header .become-seller {
 
 .svg_more {
     margin-left: 8px;
-    transform: rotate(90deg);
+    transform: rotate(270deg);
 }
 
 header .cart {
@@ -206,6 +223,7 @@ header .cart svg {
     font-weight: 500;
     gap: 4px;
     padding: 12px 8px;
+    cursor: pointer;
 }
 
 .section-1-item img{
@@ -213,11 +231,25 @@ header .cart svg {
     height: 64px;
 }
 
-/*.svg1{
+.section-1-item:hover{
+    color: #2874f0;
+}
+.section-1-item:hover svg{
+    fill: #2874f0;
+}
+
+
+.section-1-item:hover svg{
+    transform: rotate(90deg);
+    transition: 0.3s;
+    color: #2874f0;
+}
+
+.fashion-svg{
     transform: rotate(270deg);
     margin: 7px 0px 0px 8px;
 }
-*/
+
 
 .section-clock{
     margin-top: 17px;
@@ -281,9 +313,6 @@ header .cart svg {
     
 }
 
-.section-2{
-    
-}
 
 .section-2-container-1{
     display: flex;
@@ -350,7 +379,6 @@ header .cart svg {
 .section-2-offer{
     font-size: 16px;
     color: #388e3c;
-    
     margin-top: -9px;
 }
 
@@ -361,21 +389,50 @@ header .cart svg {
     margin-top: -5px;
 }
 
+.slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10vh;
+    width: 2.6vw;
+    background-color:  hsla(0,0%,100%,.98);
+    position: absolute;
+    box-shadow: 1px 2px 10px -1px rgb(0 0 0 / 30%);
+    right: 18.22vw;
+    top: 38vh;   
+    border-radius: 0.50vh;
+    cursor: pointer;
+}
+
+.slider-btn{
+    display: flex;
+    align-self: center;
+    
+}
+
+._1xtBwk{
+    transform: rotate(180deg);
+}
+
 .section-2-container-3{
     background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    max-width: 240px;
-    height: 330px;
+    width: 230px;
+    height: 397px;
+    position: absolute;
+    right: 94px;
+    top: 185px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 8%);
 }
 
-.container-offer{
-    /*display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    max-width: 240px;
-    height: 330px;*/
+.container-offer img{
+    margin-top: 8px;
+    height: 377px;
+    width: 214px;
+    margin-right: 9px;
+    cursor: pointer;
 }
 
 .section-3{
@@ -427,6 +484,7 @@ header .cart svg {
     background-color: white;
     align-items: center;
     width: 90%;
+    overflow: hidden;
 }
 
 .forth-section{
