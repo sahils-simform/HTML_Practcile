@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; 
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -20,34 +21,57 @@ body {
 /* header */
 header {
     background-color: var(--primary-color);
-    height: 56px;
+    height: 5.714vh;
 }
 .nav-container{
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
     height: 100%;
-    max-width: 1248px;
+    max-width: 67.605vw;
     margin: 0 auto;
 }
 
 .logo{
     display: flex;
-    min-width: 137px;
-    justify-content: flex-end;
+    justify-content:center;
+    flex-direction: column;
 }
 
+.flip_logo{
+    margin-top: 0.408vh;
+    display: block;
+    cursor: pointer;
+}
+
+.plus_link :hover{
+    text-decoration: underline;
+}
+
+.plus_link{
+    font-style: italic;
+    font-size: 11px;
+    margin-top: -0.408vh;
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+.plus{
+    color: #ffe500;
+    font-weight: 500;
+    margin-right: 0.108vw;
+}
 
 .search_bar {
     height: 100%;
     display: flex;
     align-items: center;
-    margin-left: 12px;
+    margin-left: 0.650vw;
 }
 
 .search-container{
-    width: 540px;
-    height: 36px;
+    width: 29.252vw;
+    height: 3.673vh;
     background-color: white;
     border-radius: 2px;
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
@@ -61,9 +85,9 @@ header {
     border: none;
 }
 .search-container button {
-    width: 36px;
+    width: 1.950vw;
     height: 100%;
-    padding: 0 8px;
+    padding: 0 0.433vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,17 +104,19 @@ header .login {
     margin: 0 20px 0 202px;
 }
 header .login button {
-    width: 122px;
-    padding: 5px 40px;
+    width: 8.413vw;
+    padding: 0.513vh 2.758vw;
     font-size: 16px;
     font-weight: 600;
     color: var(--primary-color);
+    cursor: pointer;
+    border: 0;
 }
 header .become-seller {
     height: 100%;
     display: flex;
     align-items: center;
-    margin: 0 20px;
+    margin: 0 1.379vw;
     color: white;
     font-size: 16px;
     font-weight: 500;
@@ -100,33 +126,52 @@ header .become-seller {
     height: 100%;
     display: flex;
     align-items: center;
-    margin: 0 20px;
+    margin: 0 1.083vw;
     color: white;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
+
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
+    background-color: #ffffff;
+    min-width: 13.001vw;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1; 
+    top: 5.714vh;
+    right: 21.126vw;
+    border-radius: 2px;
+    align-items: center;
 }
   
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 1.428vh 0.866vw;
     text-decoration: none;
     display: block;
-  }
+    justify-content: center;
+    font-weight: 400;
+    font-size: 0.8vw;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: center;
+}
 
-  .more:hover .dropdown-content {
+.notification{
+    background-color: white;
+    gap: 1px;
+}
+
+.more:hover .dropdown-content {
     display: block;
   }
   
+.more:hover .svg_more{
+    transform: rotate(90deg);
+    transition: 0.3s;
+}
 
 .container-header_items{
     text-decoration: none;
@@ -134,7 +179,7 @@ header .become-seller {
 }
 
 .svg_more {
-    margin-left: 8px;
+    margin-left: 0.433vw;
     transform: rotate(270deg);
 }
 
@@ -142,8 +187,9 @@ header .cart {
     height: 100%;
     display: flex;
     align-items: center;
-    margin: 0 20px;
+    margin: 0 1.083vw;
     color: white;
+    cursor: pointer;
 }
 header .cart svg {
     margin-right: 8px;
@@ -151,7 +197,7 @@ header .cart svg {
 
 .section_1{
     width: 100%;
-    min-height: 112px;
+    min-height: 11.428vh;
     background-color: #fff;
     box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
 }
@@ -161,7 +207,7 @@ header .cart svg {
     align-items:center;
     justify-content: space-between;
     height: 100%;
-    max-width: 1280px;
+    max-width: 69.339vw;
     margin: 0 auto;
 }
 
@@ -174,17 +220,345 @@ header .cart svg {
     font-size: 14px;
     font-weight: 500;
     gap: 4px;
-    padding: 12px 8px;
+    padding: 1.224vh 0.433vw;
+    cursor: pointer;
 }
 
 .section-1-item img{
-    width: 64px;
-    height: 64px;
+    width: 3.466vw;
+    height: 6.530vh;
 }
 
-.svg1{
+.section-1-item:hover{
+    color: #2874f0;
+}
+.section-1-item:hover svg{
+    fill: #2874f0;
+}
+
+
+.section-1-item:hover svg{
+    transform: rotate(90deg);
+    transition: 0.3s;
+    color: #2874f0;
+}
+
+.fashion-svg{
     transform: rotate(270deg);
-    margin: 7px 0px 0px 8px;
+    margin: 0.714vh 0px 0px 0.433vw;
 }
 
-/* section 2 */
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 13.001vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+    top: 17.29vh;
+    /*right: 54.126vw; */
+    border-radius: 2px;
+    
+}
+  
+.drop-content a {
+    color: black;
+    padding: 1.428vh 0.866vw;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    font-weight: 400;
+    font-size: 0.8vw;
+    border-bottom: 1px solid #f0f0f0;
+    
+}
+
+
+
+.section-1-item:hover .drop-content{
+    display: block;
+}
+
+.section-clock{
+    margin-top: 1.73vh;
+    margin-left: 4.87vw;
+    margin-right: 17.87vw;
+    height: 6.53vh;
+    background-color: white;
+    width: 77%;
+}
+
+/* section 2 start */
+
+
+.section-2-item-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.section-2-item-left p{
+    color: black;
+    font-size:x-large;
+    padding: 1.83vh 0.92vw 1.83vh 0.92vw;
+    font-weight:410;
+    
+}
+
+.left-p{
+    color: rgb(144, 144, 144);
+    align-self: center;
+    justify-content: center;
+    margin:10px;
+}
+
+.clock{
+    margin-top: 2.04vh;
+}
+
+.section-2-item-right{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;    
+    align-items: center;
+    position: relative;
+    top: -5.3061vh;
+}
+
+.btn{
+    background-color: #2874f0;
+    color: white;
+    height: 4.08vh;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-weight: bold;
+    margin-right: 0.975vw;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    border-style: none;
+    border-radius: 2px;
+    cursor: pointer;        
+    
+}
+
+
+.section-2-container-1{
+    display: flex;
+    margin-top: 0.153vh;
+    margin-left: 4.875vw;
+    margin-right: 17.876vw;
+    height: 33.673vh;
+    justify-content:space-between;
+    background-color: white;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 8%);
+    align-items: stretch;
+    overflow: hidden;
+    width: 77%;
+
+   /*row-gap: 5px;
+    column-gap: 10px;    
+    justify-content: center;
+    text-align: center;*/
+    /* height: auto; */
+    /* align-items: center; 
+    margin: 50px;*/
+}
+
+.second-section{
+    height: 100%;
+    width: calc(100% - 230px);
+    display: flex;
+    
+}
+
+.section-2-items{
+    /*height:auto;
+    background-color: white;
+    color:white;
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;*/
+    width: 12.567vw;
+    height: 100%;
+    padding: 1.020vh 1.083vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.020vh;
+    cursor: pointer;
+}
+
+.section-2-items img{
+    max-width: 12.719vw;
+    max-height: 25.240vh;
+}
+
+.section-2-head{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 1.530vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.section-2-offer{
+    font-size: 16px;
+    color: #388e3c;
+    margin-top: -0.918vh;
+}
+
+.section-2-explore{
+    opacity: .6;
+    font-size: 14px;
+    padding-bottom: 1.020vh;
+    margin-top: -0.510vh;
+}
+
+.slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10vh;
+    width: 2.6vw;
+    background-color:  hsla(0,0%,100%,.98);
+    position: absolute;
+    box-shadow: 1px 2px 10px -1px rgb(0 0 0 / 30%);
+    right: 18.22vw;
+    top: 38vh;   
+    border-radius: 0.50vh;
+    cursor: pointer;
+}
+
+.slider-btn{
+    display: flex;
+    align-self: center;
+    
+}
+
+._1xtBwk{
+    transform: rotate(180deg);
+}
+
+.section-2-container-3{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 12.459VW;
+    height: 40.510vh;
+    position: absolute;
+    right: 5.092vw;
+    top: 18.877vh;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 8%);
+}
+
+.container-offer img{
+    margin-top: 0.816vh;
+    height: 38.469vh;
+    width: 11.592vw;
+    margin-right: 0.487vw;
+    cursor: pointer;
+}
+
+.section-3{
+    margin-top: 1.020vh;
+    background-color: white;
+    margin-left: 4.875vw;
+    margin-right: 4.875vw;
+    height: 8.163vh;
+    width: 90%;
+}
+
+.section-3-item-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.section-3-item-left p{
+    color: black;
+    font-size:x-large;
+    padding: 1.83vh 0.92vw 1.83vh 0.92vw;
+    font-weight:410;
+    
+}
+
+.left-p{
+    color: rgb(144, 144, 144);
+    align-self: center;
+    justify-content: center;
+    margin:10px;
+}
+
+.shop-now{
+    opacity: .6;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1.530vh;
+    margin-left: 0.920vw;
+}
+
+.section-4{
+    display: flex;
+    margin-top: 0.204vh;
+    margin-left: 4.875vw;
+    margin-right: 4.875vw;
+    height: 30.612vh;
+    justify-content:space-between;
+    background-color: white;
+    align-items: center;
+    width: 90%;
+    overflow: hidden;
+}
+
+.forth-section{
+    height: 100%;
+    width: calc(100% - 230px);
+    display: flex;
+}
+
+.section-4-items{
+    width: 12.567vw;
+    height: 100%;
+    padding: 1.020vh 1.083vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.section-4-items img{
+    max-width: 11.375vw;
+    max-height: 21.428vh;
+}
+
+.section-4-head{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 1.530vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.section-4-offer{
+    font-size: 16px;
+    color: #388e3c;
+    padding-top: 0.408vh;
+}
+
+.section-4-explore{
+    opacity: .6;
+    font-size: 14px;
+    padding-top: 0.306vh;
+    padding-bottom: 0.408vh;
+}
+
+
+
